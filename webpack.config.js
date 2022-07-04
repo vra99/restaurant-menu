@@ -7,23 +7,24 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry: ['./src/App.js'],
+    entry: ['./src/index.js'],
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: [
-                                '@babel/preset-env',
-                                '@babel/preset-react',
-                            ].map(require.resolve),
+                            presets: ['@babel/preset-env', '@babel/preset-react'].map(require.resolve),
                         },
                     },
                 ],
+            },
+            {
+                test: /\.css$/,
+                use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
             },
         ],
     },

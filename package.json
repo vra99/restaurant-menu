@@ -1,32 +1,47 @@
 {
-  "name": "ot-menu-test",
-  "version": "1.0.0",
-  "description": "A small scaffold application for building ot-menu coding challenge",
-  "main": "index.js",
-  "scripts": {
-    "start-server": "node src/server/index.js",
-    "start-app": "webpack-dev-server --mode development --open",
-    "start": "concurrently \"npm:start-server\" \"npm:start-app\""
-  },
-  "author": "OpenTable",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "concurrently": "^6.2.1",
-    "html-webpack-plugin": "^5.3.2",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
-  }
+    "name": "ot-menu-test",
+    "version": "1.0.0",
+    "description": "A small scaffold application for building ot-menu coding challenge",
+    "main": "index.js",
+    "scripts": {
+        "start-server": "node src/server/index.js",
+        "start-app": "webpack-dev-server --mode development --open",
+        "start": "concurrently \"npm:start-server\" \"npm:start-app\"",
+        "test": "jest -i --colors --verbose --detectOpenHandles",
+        "test:watch": "jest -i --watchAll"
+    },
+    "author": "OpenTable",
+    "license": "ISC",
+    "dependencies": {
+        "@apollo/client": "^3.6.9",
+        "@testing-library/react": "^11.2.7",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-graphql": "^0.12.0",
+        "graphql": "^15.8.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "styled-components": "^5.3.5"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.1.0",
+        "@babel/core": "^7.1.0",
+        "@babel/preset-env": "^7.1.0",
+        "@babel/preset-react": "^7.0.0",
+        "@testing-library/jest-dom": "^5.16.4",
+        "babel-loader": "^8.0.2",
+        "concurrently": "^6.2.1",
+        "css-loader": "^6.7.1",
+        "eslint-config-prettier": "^8.5.0",
+        "html-webpack-plugin": "^5.3.2",
+        "install": "^0.13.0",
+        "jest": "^28.1.2",
+        "jest-environment-jsdom": "^28.1.2",
+        "npm": "^8.13.2",
+        "prettier": "2.7.1",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.51.1",
+        "webpack-cli": "^4.8.0",
+        "webpack-dev-server": "^4.0.0"
+    }
 }
