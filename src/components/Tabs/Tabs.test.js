@@ -1,10 +1,9 @@
-import React from 'react'
-import { Tabs } from './Tabs'
+import React from 'react';
+import { Tabs } from './Tabs';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-
-const setup=() => {
-    const { container }= render(
+const setup = () => {
+    const { container } = render(
         <Tabs>
             <div title="Starters">
                 <div>Starter 1</div>
@@ -12,16 +11,16 @@ const setup=() => {
             <div title="Mains">
                 <div>Main 1</div>
             </div>
-        </Tabs>                       
+        </Tabs>
     );
     return { container };
-}
+};
 
 describe(Tabs.displayName, () => {
     it('should render correctly', () => {
         const { container } = setup();
         expect(container).toBeDefined();
-    })
+    });
 
     // should render two tabs
     it('should render two tabs', () => {
@@ -30,7 +29,7 @@ describe(Tabs.displayName, () => {
     });
 
     // should render activeTab?.props.children
-    it('should render active tab children', async () =>{
+    it('should render active tab children', async () => {
         setup();
         expect(screen.queryByText('Starter 1')).toBeDefined();
 
@@ -43,6 +42,4 @@ describe(Tabs.displayName, () => {
         expect(screen.queryByText('Starter 1')).toBeNull();
         expect(screen.queryByText('Main 1')).toBeDefined();
     });
-
 });
-

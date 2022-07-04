@@ -122,17 +122,11 @@ export const GET_MENU = gql`
     }
 `;
 
-const Container= styled.div`
-    body {
-        background-color: #f2f2f2;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    .container {
-        margin: 0 auto;
-        width: 75%;
-        height: 100vh;
-    }
+const Container = styled.div`
+    margin: 0 auto;
+    width: 75%;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
 `;
 
 App.displayName = 'App';
