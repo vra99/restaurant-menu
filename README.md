@@ -33,6 +33,3 @@ This restaurant, unfortunately, has a number of rules about the meals that can b
 -   The total bill amount is displayed when at least one dish has been selected.
 -   An error message is displayed when I try to select an invalid menu combination.
 
-## Submission
-
-Please submit your program as an online repository or downloadable link to your point of contact at OpenTable.
